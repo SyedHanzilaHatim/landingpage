@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import Categories from "./components/Categories";
+import BestSellers from "./components/BestSellers";
+import CustomHoodies from "./components/CustomHoodies";
+import ProductShowcase from "./components/ProductShowcase";
+import Subscribe from "./components/Subscribe";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <HeroSection />
+        <Categories />
+        <BestSellers />
+        <CustomHoodies />
+        <ProductShowcase />
+        <Subscribe />
+        <Footer />
+      </div>
+      <Routes>
+        {/* Add routes for different pages as needed */}
+      </Routes>
+    </Router>
   );
 }
 
